@@ -19,11 +19,12 @@ public class Connexion extends HttpServlet {
 	public static final String ATT_USER         = "utilisateur";
     public static final String ATT_FORM         = "form";
     public static final String ATT_SESSION_USER = "sessionUtilisateur";
-    public static final String VUE              = "/connexion.jsp";
+    public static final String VUE              = "/WEB-INF/connexion.jsp";
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        
+    	ServletException e = new ServletException();
     	/* Affichage den la page de connexion */
+    	System.out.println(e.getMessage());
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }
 
